@@ -11,4 +11,39 @@
 
 <!-- Diretivas Estruturais -->
 
-<h2 *ngIf="count >7"> O contador passou de 7!</h2>
+<h2 *ngIf="count >7; else menor"> O contador passou de 7!</h2>
+
+<ng-template #menor>
+    <h2> O contador é menor do que 7!</h2>
+
+</ng-template> <!-- #name é o identificador -->
+
+<ul [ngSwitch]="count" class="list-group mx-auto col-3">
+    <li 
+        class="list-group-item"
+        *ngSwitchCase="1">É igual a 1
+    </li>
+    <li 
+        class="list-group-item"
+        *ngSwitchCase="2">É igual a 2
+    </li>
+    <li 
+        class="list-group-item"
+        *ngSwitchCase="3">É igual a 3
+    </li>
+    <li 
+        class="list-group-item"
+        *ngSwitchCase="4">É igual a 4
+    </li>
+</ul>
+
+<ul [ngSwitch]="count" class="list-group mx-auto col-3">
+    <li 
+        class="list-group-item">
+        
+    </li>
+
+
+  
+
+</ul>
