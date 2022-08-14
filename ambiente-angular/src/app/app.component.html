@@ -1,24 +1,24 @@
-<h1 class="text-success">Live Diretivas</h1>
+<!-- <h1 class="text-success">Live Diretivas</h1>
 
  <div 
     [ngStyle]="{background: count < 5 ? 'red' :'green'}" 
     [ngClass]="{custom: count > 5}"
- > <!--red = menor, green = maior -->
+ > red = menor, green = maior -->
 
-    <h2 class="text-center">Contador: {{count}}</h2>
+    <!-- <h2 class="text-center">Contador: {{count}}</h2>
 
-</div>
+</div> -->
 
 <!-- Diretivas Estruturais -->
 
-<h2 *ngIf="count >7; else menor"> O contador passou de 7!</h2>
+<!-- <h2 *ngIf="count >7; else menor"> O contador passou de 7!</h2>
 
 <ng-template #menor>
     <h2> O contador é menor do que 7!</h2>
 
-</ng-template> <!-- #name é o identificador -->
+</ng-template> #name é o identificador -->
 
-<ul [ngSwitch]="count" class="list-group mx-auto col-3">
+<!-- <ul [ngSwitch]="count" class="list-group mx-auto col-3">
     <li 
         class="list-group-item"
         *ngSwitchCase="1">É igual a 1
@@ -35,23 +35,25 @@
         class="list-group-item"
         *ngSwitchCase="4">É igual a 4
     </li>
-</ul>
+</ul> -->
 
- <ul  class="list-group mx-auto col-3"> 
-    <li 
-        class="list-group-item"
-        *ngFor="let pessoa of pessoas"
-    
-    >
-        o nome da pessoa é {{pessoa.nome}} {{pessoa.sobrenome}}
-    </li>
 
-</ul>
-<br>
+
+<!-- <br>
 <div class="col-4 mx-auto">
     <button class="btn btn-success" (click)="clicou('Anne')"> Clique aqui !</button>
 </div>
 <div class="col-4 mx-auto">
-    <input type="text" class="form-control" placeholder="digite alguma coisa" [(ngModel)]="text">
+    <input type="text" class="form-control" placeholder="digite alguma coisa" [(ngModel)]="text" >
     <h4>Saida: {{text}}</h4>
+</div> -->
+
+<div class="container">
+    <div class="row d-flex align-center justify-content">
+        <h2 class="text-center">Listagem de personagens Rick and Morty</h2>
+        <div class="col-12">
+            <app-list-api></app-list-api>
+        </div>
+
+    </div>
 </div>
